@@ -16,7 +16,7 @@ void error_handling(char*msg);
 
 int clnt_cnt = 0;
 int clnt_socks[MAX_CLNT];
-int pthread_mutex_t mutx;
+pthread_mutex_t mutx;
 
 int main(int argc, char *argv[])
 {
