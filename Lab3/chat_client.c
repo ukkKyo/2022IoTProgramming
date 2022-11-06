@@ -4,7 +4,7 @@
 #include <string.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
-#inlcude <pthread.h>
+#include <pthread.h>
 
 #define BUF_SIZE 100
 #define NAME_SIZE 20
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
   }
 
   sprintf(name, "[%s]", argv[3]);
-  sock=socket(PF_INET, SOCK_STREAN, 0);
+  sock=socket(PF_INET, SOCK_STREAM, 0);
 
   memset(&serv_addr, 0, sizeof(serv_addr));
   serv_addr.sin_family=AF_INET;
@@ -66,7 +66,7 @@ void *send_msg(void *arg) //send thread main
 
 void *recv_msg(void *arg) // read thread main
 {
-  int sock=*((int*arg));
+  int sock=*((int*)arg);
   char name_msg[NAME_SIZE + BUF_SIZE];
   int str_len;
   while(1)
