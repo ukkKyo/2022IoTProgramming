@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#inlcude <pthread.h>
+#include <pthread.h>
 
 #define BUF_SIZE 100
 #define MAX_CLNT 256
