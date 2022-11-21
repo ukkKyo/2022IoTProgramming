@@ -17,15 +17,15 @@ gpioSetMode(RLED, PI_OUTPUT);
 while(1) {
   gpioWrite(GLED, 1); 
   gpioDelay(3000000); 
-  gpioWrite(pin, 0);
+  gpioWrite(GLED, 0);
 
   gpioWrite(YLED, 1); 
   gpioDelay(3000000); 
-  gpioWrite(pin, 0);
+  gpioWrite(YLED, 0);
 
   gpioWrite(RLED, 1); 
   gpioDelay(3000000); 
-  gpioWrite(pin, 0);
+  gpioWrite(RLED, 0);
   }
 
 gpioTerminate();
