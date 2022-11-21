@@ -5,7 +5,7 @@
 
 int main()
 {
-  int led1 = 12;
+  int led = 12;
   int step = 10000;
   int delay = 10000;
   int freq = 10000;
