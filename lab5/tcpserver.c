@@ -49,13 +49,13 @@ int main(void) {
   
   // 5) accept(), blocking...
   clilen = sizeof(cli_addr);
-  if(cli_fd = accept(serv_fd, (struct sockaddr *)&cli_addr, &clilen)) == -1) {
+  if((cli_fd = accept(serv_fd, (struct sockaddr *)&cli_addr, &clilen)) == -1) {
     perror("ERROR on accept");
     exit(1);
   }
   
   // 6) read/write, write(), sending...
-  write(cli_fd, "Welcome to Chat Server.....LED control..", BUFSIZE);
+  write(cli_fd, "Welcome to Chat Server.....LED control..", BUFFSIZE);
   
   while(1) {
     // 6) read/write, read(), receiving...
