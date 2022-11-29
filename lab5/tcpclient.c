@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[]) {
   int sock_fd;
-  struct sockadr_in serv_addr;
+  struct sockaddr_in serv_addr;
   char buffer[BUFFSIZE];
   
   printf("[TCP server for chatting and controlling LED...]\n");
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
   
   // 4) read/write, read(), receiving...
   memset(buffer, 0x00, sizeof(buffer));
-  if(read(sock_fd, buffer, BUFSIZE)== -1) {
+  if(read(sock_fd, buffer, BUFFSIZE)== -1) {
     perror("ERROR reading from socket");
     exit(1);
   }
